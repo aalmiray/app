@@ -1,0 +1,31 @@
+project:
+  name: app
+  description: Sample application
+  longDescription: Sample application
+  website: https://github.com/aalmiray/app
+  authors:
+    - Andres Almiray
+  license: Apache-2.0
+  java:
+    groupId: com.acme
+    version: 8
+
+release:
+  github:
+    owner: aalmiray
+    overwrite: true
+    sign: true
+
+signing:
+  enabled: true
+  armored: true
+
+packagers:
+  brew:
+    enabled: true
+
+distributions:
+  app:
+    artifacts:
+      - path: target/distributions/{{distributionName}}/{{distributionName}}-{{projectVersion}}.zip
+      - path: target/distributions/{{distributionName}}/{{distributionName}}-{{projectVersion}}.tar.gz
