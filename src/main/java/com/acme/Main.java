@@ -1,14 +1,9 @@
 package com.acme;
 
-/**
- * Do stuff
- */
 public class Main {
     public static void main(String[] args) {
-        System.out.println(new Main().getValue());
-    }
-
-    public String getValue() {
-        return "42";
+        String name = "world";
+        if (args != null && args.length > 0) name = args[0];
+        System.out.println("Hello " + name);
     }
 }
