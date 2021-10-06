@@ -2,7 +2,7 @@ project:
   name: app
   description: Sample application
   longDescription: Sample application
-  website: https://github.com/aalmiray/app
+  website: https://acme.com/wesome-app
   authors:
     - Andres Almiray
   license: Apache-2.0
@@ -21,13 +21,18 @@ release:
       formatted: ALWAYS
       format: '- {{commitShortHash}} {{commitTitle}}'
       contributors:
-        format: '{{contributorName}}{{#contributorUsernameAsLink}} ({{.}}){{/contributorUsernameAsLink}}'
+        format: '- {{contributorName}}{{#contributorUsernameAsLink}} ({{.}}){{/contributorUsernameAsLink}}'
       labelers:
+        - label: 'feature'
+          title: 'feat:'
         - label: 'issue'
-          title: 'Add'
+          title: 'fix:'
         - label: 'task'
-          title: 'Setup'
+          title: 'chore:'
       categories:
+        - title: '🚀 Features'
+          labels:
+            - 'feature'
         - title: '✅ Issues'
           labels:
             - 'issue'
@@ -35,9 +40,9 @@ release:
           labels:
             - 'task'
       replacers:
-        - search: '\[chore\] '
-        - search: '\[announce\]'
-          replace: '📣'
+        - search: 'feat: '
+        - search: 'fix: '
+        - search: 'chore: '
 
 signing:
   active: always
