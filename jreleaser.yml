@@ -2,42 +2,28 @@ project:
   name: app
   description: Sample application
   longDescription: Sample application
-  website: https://github.com/aalmiray/app
+  links:
+    homepage: https://acme.com/awesome-app
   authors:
     - Andres Almiray
   license: Apache-2.0
   java:
     groupId: com.acme
     version: 8
-  extraProperties:
-    inceptionYear: 2021
+  inceptionYear: 2021
+  stereotype: cli
 
 release:
   github:
     overwrite: true
     sign: true
-    discussionCategoryName: Announcements
+    discussionCategoryName: 'Announcements'
     changelog:
-      formatted: ALWAYS
+      formatted: 'ALWAYS'
       format: '- {{commitShortHash}} {{commitTitle}}'
+      preset: 'conventional-commits'
       contributors:
-        format: '{{contributorName}}{{#contributorUsernameAsLink}} ({{.}}){{/contributorUsernameAsLink}}'
-      labelers:
-        - label: 'issue'
-          title: 'Add'
-        - label: 'task'
-          title: 'Setup'
-      categories:
-        - title: '✅ Issues'
-          labels:
-            - 'issue'
-        - title: '🧰 Tasks'
-          labels:
-            - 'task'
-      replacers:
-        - search: '\[chore\] '
-        - search: '\[announce\]'
-          replace: '📣'
+        format: '- {{contributorName}}{{#contributorUsernameAsLink}} ({{.}}){{/contributorUsernameAsLink}}'
 
 signing:
   active: always
