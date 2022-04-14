@@ -60,5 +60,6 @@ upload:
     ixchelruiz:
       active: always
       host: 'https://ixchelr.jfrog.io/artifactory'
+      authorization: basic
       repositories:
-        - path: 'binaries/{{projectName}}/{{projectVersion}}/{{artifactFile}}'
+        - path: 'default-libs-release-local/{{projectName}}/{{projectVersion}}/{{artifactFile}}'
