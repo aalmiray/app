@@ -4,7 +4,6 @@ on:
   # After "🐸 frogbot scan" label was added to a pull request, Frogbot scans the pull request.
   pull_request_target:
     types: [ labeled, opened, synchonized ]
-  workflow_dispatch:
   
 jobs:
   scan-pull-request:
